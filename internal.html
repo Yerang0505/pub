@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사내 기술 자료 및 교육 아카이브 - (주)비에이텍</title>
+    <meta name="description" content="(주)비에이텍 임직원용 AI 활용 가이드, 웹사이트 구축 및 데이터 분석 교육용 고해상도 지침서와 매뉴얼을 열람할 수 있는 사내 자료 아카이브 페이지입니다.">
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav id="navbar" class="scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">(주)비에이텍<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="intro.html">기업소개</a></li>
+                <li><a href="product.html">주요제품</a></li>
+                <li><a href="equipment.html">장비</a></li>
+                <li><a href="records.html">주요사업실적</a></li>
+                <li><a href="map.html">찾아오시는 길</a></li>
+                <li><a href="internal.html" style="color: var(--secondary); font-weight: 700;">내부인용</a></li>
+                <li><a href="inquiry.html" class="btn" style="padding: 0.5rem 1.2rem; background: linear-gradient(135deg, var(--secondary), var(--primary)); color: white; border-radius: 20px;">문의하기</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sub-Hero Section -->
+    <section class="sub-hero">
+        <div class="sub-hero-overlay"></div>
+        <div class="container sub-hero-content" style="max-width: 1000px;">
+            <h1 class="reveal active" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); word-break: keep-all;">임직원용 AI & 사내 기술 교육 아카이브</h1>
+            <p class="reveal active">생성형 AI 비즈니스 실무 프롬프트 지침, 데이터 시각화 가이드 및 웹시스템 매뉴얼 등 핵심 사내 역량 강화 자료실입니다. 온라인 뷰어 혹은 오프라인 다운로드를 활용하세요.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="section" style="background-color: #f8fafc; padding: 60px 0 100px 0;">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="product-intro reveal active" style="margin-bottom: 50px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h2 style="font-size: 2.2rem; color: var(--primary-dark); margin-bottom: 20px; font-weight: 700;">사내 교육 및 연구 실무 자료</h2>
+                <div class="divider" style="width: 80px; height: 5px; background: var(--secondary); margin: 0 auto 20px; border-radius: 10px;"></div>
+                <p style="color: var(--text-main); font-size: 1.12rem; line-height: 1.8;">
+                    비에이텍 임직원들이 연구와 비즈니스에 활용할 수 있도록 AI 프롬프트 가이드라인, 인공지능 분석 가이드 및 카드뉴스 기법, 그리고 본 시스템 구축 명세서를 통합 뷰어로 제공합니다.
+                </p>
+            </div>
+
+            <!-- Two-Column Interactive Workspace Layout -->
+            <div class="internal-doc-layout">
+                
+                <!-- Left: Document List Sidebar -->
+                <div class="doc-list-sidebar reveal active">
+                    <!-- Document Card 1: 웹사이트 구축 자료 -->
+                    <div class="doc-card active" data-doc-id="web-build">
+                        <div class="doc-card-header">
+                            <div class="doc-icon-wrapper">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3 class="doc-title">웹사이트 구축 자료</h3>
+                                <div class="doc-meta-row">
+                                    <span class="doc-badge pdf">PDF</span>
+                                    <span class="doc-badge size">1.38 MB</span>
+                                    <span class="doc-badge tag">웹 개발</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="doc-description">본 비에이텍 웹사이트의 개발 설정, 라이브러리 가이드 및 로컬 테스트 서버 구축 기법을 포괄적으로 다룹니다.</p>
+                        <div class="doc-actions-row">
+                            <button class="btn-doc-action view"><i class="fas fa-eye"></i> 바로보기</button>
+                            <a href="./웹사이트 구축 자료.pdf" class="btn-doc-action download" download><i class="fas fa-download"></i> 다운로드</a>
+                        </div>
+                    </div>
+
+                    <!-- Document Card 2: Prompt작성가이드 자료 -->
+                    <div class="doc-card" data-doc-id="prompt-guide">
+                        <div class="doc-card-header">
+                            <div class="doc-icon-wrapper">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3 class="doc-title">Prompt작성가이드 자료</h3>
+                                <div class="doc-meta-row">
+                                    <span class="doc-badge pdf">PDF</span>
+                                    <span class="doc-badge size">193 KB</span>
+                                    <span class="doc-badge tag">프롬프트</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="doc-description">LLM 및 생성형 AI 모델로부터 목적에 맞는 고품질 응답과 코드 조각을 도출하기 위한 실무 프롬프트 기법입니다.</p>
+                        <div class="doc-actions-row">
+                            <button class="btn-doc-action view"><i class="fas fa-eye"></i> 바로보기</button>
+                            <a href="./Prompt작성가이드 자료.pdf" class="btn-doc-action download" download><i class="fas fa-download"></i> 다운로드</a>
+                        </div>
+                    </div>
+
+                    <!-- Document Card 3: GenAI를 활용한 데이터 분석 자료 -->
+                    <div class="doc-card" data-doc-id="data-analysis">
+                        <div class="doc-card-header">
+                            <div class="doc-icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3 class="doc-title">GenAI를 활용한 데이터 분석 자료</h3>
+                                <div class="doc-meta-row">
+                                    <span class="doc-badge pdf">PDF</span>
+                                    <span class="doc-badge size">232 KB</span>
+                                    <span class="doc-badge tag">데이터 분석</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="doc-description">AI 모델을 활용해 제조 데이터 및 통계 자료를 효과적으로 가공하고, 시각화 및 EDA 분석을 진행하는 핵심 지침서입니다.</p>
+                        <div class="doc-actions-row">
+                            <button class="btn-doc-action view"><i class="fas fa-eye"></i> 바로보기</button>
+                            <a href="./GenAI를 활용한 데이터 분석 자료.pdf" class="btn-doc-action download" download><i class="fas fa-download"></i> 다운로드</a>
+                        </div>
+                    </div>
+
+                    <!-- Document Card 4: 발표자료 생성 AI 자료 -->
+                    <div class="doc-card" data-doc-id="presentation-ai">
+                        <div class="doc-card-header">
+                            <div class="doc-icon-wrapper">
+                                <i class="fas fa-file-powerpoint"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3 class="doc-title">발표자료 생성 AI 자료</h3>
+                                <div class="doc-meta-row">
+                                    <span class="doc-badge pdf">PDF</span>
+                                    <span class="doc-badge size">2.77 MB</span>
+                                    <span class="doc-badge tag">발표자료 AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="doc-description">AI 프레젠테이션 툴(Gamma 등)을 사용해 정교한 기술 발표 자료, 영업 카탈로그 장표를 빠른 속도로 자동화하여 기획하는 방법입니다.</p>
+                        <div class="doc-actions-row">
+                            <button class="btn-doc-action view"><i class="fas fa-eye"></i> 바로보기</button>
+                            <a href="./발표자료 생성 AI 자료.pdf" class="btn-doc-action download" download><i class="fas fa-download"></i> 다운로드</a>
+                        </div>
+                    </div>
+
+                    <!-- Document Card 5: GEMS 가이드와 카드뉴스 제작 자료 -->
+                    <div class="doc-card" data-doc-id="gems-cardnews">
+                        <div class="doc-card-header">
+                            <div class="doc-icon-wrapper">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3 class="doc-title">GEMS 가이드와 카드뉴스 제작 자료</h3>
+                                <div class="doc-meta-row">
+                                    <span class="doc-badge pdf">PDF</span>
+                                    <span class="doc-badge size">444 KB</span>
+                                    <span class="doc-badge tag">카드뉴스</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="doc-description">캔바(Canva) 등 디자인 협업 도구와 생성형 AI 기획을 조화롭게 융합하여 세련된 홍보용 카드뉴스 및 가이드라인을 만드는 가이드입니다.</p>
+                        <div class="doc-actions-row">
+                            <button class="btn-doc-action view"><i class="fas fa-eye"></i> 바로보기</button>
+                            <a href="./GEMS 가이드와 카드뉴스 제작 자료.pdf" class="btn-doc-action download" download><i class="fas fa-download"></i> 다운로드</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Premium PDF Document Viewer -->
+                <div class="reveal active">
+                    <div class="premium-viewer-card">
+                        <div class="viewer-top-toolbar">
+                            <div class="viewer-controls">
+                                <i class="fas fa-file-pdf" style="color: #ef4444; font-size: 1.25rem;"></i>
+                                <span class="viewer-doc-title" id="viewer-title">웹사이트 구축 자료.pdf</span>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="viewer-controls">
+                                <a id="btn-viewer-download" href="./웹사이트 구축 자료.pdf" class="btn-viewer-download" download><i class="fas fa-download"></i> 다운로드</a>
+                            </div>
+                        </div>
+
+                        <!-- Render iframe Viewport -->
+                        <div class="viewer-viewport-pane" id="viewer-viewport" style="padding: 0; overflow: hidden;">
+                            <iframe id="pdf-viewer-frame" src="./웹사이트 구축 자료.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="logo">(주)비에이텍<span>.</span></h3>
+                    <p style="margin-bottom: 25px; color: #94a3b8;">워터펌프 제작, 설치, 수리 분야의<br>신뢰받는 파트너가 되겠습니다.</p>
+                    <div class="footer-info">
+                        <p><i class="fas fa-user"></i> 대표이사: 조세연</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 강원특별자치도 춘천시 퇴계공단2길 64</p>
+                        <p><i class="fas fa-phone"></i> 033-264-9243</p>
+                        <p><i class="fas fa-fax"></i> 033-251-5747</p>
+                        <p><i class="fas fa-envelope"></i> cilly03@naver.com</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>바로가기</h4>
+                    <ul>
+                        <li><a href="intro.html">기업소개</a></li>
+                        <li><a href="product.html">주요제품</a></li>
+                        <li><a href="equipment.html">장비현황</a></li>
+                        <li><a href="records.html">주요사업실적</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>고객지원</h4>
+                    <ul>
+                        <li><a href="map.html">찾아오시는 길</a></li>
+                        <li><a href="inquiry.html">온라인 문의</a></li>
+                        <li><a href="equipment.html">유지보수 지침서</a></li>
+                        <li><a href="inquiry.html">A/S 접수</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 (주)비에이텍. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

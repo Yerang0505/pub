@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)비에이텍 - 기업소개</title>
-    <meta name="description" content="(주)비에이텍의 기업 비전, 홍보 영상 및 정밀 정량펌프 제품 브로슈어를 소개합니다.">
+    <title>기업소개 - (주)비에이텍</title>
+    <meta name="description" content="(주)비에이텍의 무맥동 정량펌프 관련 종합 기업소개 브로슈어를 열람 및 다운로드하실 수 있습니다.">
     <link rel="stylesheet" href="index.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,106 +12,131 @@
 <body>
 
     <!-- Header Navigation -->
-    <nav id="navbar" class="scrolled"> <!-- Always scrolled styling on subpages for readability -->
+    <nav id="navbar" class="scrolled">
         <div class="container nav-content">
             <a href="index.html" class="logo">(주)비에이텍<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="intro.html" class="active">기업소개</a></li>
+                <li><a href="intro.html" style="color: var(--secondary); font-weight: 700;">기업소개</a></li>
                 <li><a href="product.html">주요제품</a></li>
                 <li><a href="equipment.html">장비</a></li>
-                <li><a href="sales_history.html">업력</a></li>
+                <li><a href="records.html">주요사업실적</a></li>
                 <li><a href="map.html">찾아오시는 길</a></li>
-                <li><a href="inquiry.html">문의</a></li>
+                <li><a href="internal.html">내부인용</a></li>
+                <li><a href="index.html" class="btn" style="padding: 0.5rem 1.2rem; background: linear-gradient(135deg, var(--secondary), var(--primary)); color: white; border-radius: 20px;">홈으로</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Subpage Hero Section -->
-    <section class="subpage-hero">
-        <div class="subpage-hero-overlay"></div>
-        <div class="container subpage-hero-content reveal">
-            <h1>기업소개</h1>
-            <p>기술과 품질로 보답하는 물 관리 솔루션의 리더, (주)비에이텍입니다.</p>
+    <!-- Sub-Hero Section -->
+    <section class="sub-hero">
+        <div class="sub-hero-overlay"></div>
+        <div class="container sub-hero-content">
+            <h1 class="reveal active">기업소개 및 홍보관</h1>
+            <p class="reveal active">정밀 정량 펌프 기술의 선두주자, (주)비에이텍의 우수한 기술력과 혁신 가치를 영상과 종합 카탈로그로 만나보세요.</p>
         </div>
     </section>
 
-    <!-- Company Video Section -->
-    <section class="section" style="background-color: #ffffff;">
+    <!-- Main Content Section -->
+    <section class="section" style="background-color: #f8fafc; padding: 80px 0;">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>기업 홍보 영상</h2>
-                <div class="divider"></div>
-                <p style="margin-top: 20px; color: var(--text-muted);">혁신적인 기술력과 친환경 시스템으로 미래를 열어가는 비에이텍의 활약상을 감상하세요.</p>
-            </div>
             
-            <div class="video-container reveal">
-                <!-- HTML5 Video Player with beautiful poster and local/online dual fallback -->
-                <!-- 로컬 폴더에 '홍보영상.mp4' 파일이 있으면 우선 재생되며, 없을 경우 수처리 데모 영상이 재생됩니다. -->
-                <video controls poster="hero.png" class="promo-video">
-                    <source src="홍보영상.mp4" type="video/mp4">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-water-filtration-system-in-operation-40078-large.mp4" type="video/mp4">
-                    우수한 화질의 비디오 플레이어가 지원되지 않는 브라우저입니다.
-                </video>
-            </div>
-        </div>
-    </section>
-
-    <!-- Brochure Section -->
-    <section class="section" style="background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>제품 브로슈어 및 인증서</h2>
-                <div class="divider"></div>
-                <p style="margin-top: 20px; color: var(--text-muted);">로컬 폴더에 '브로슈어1.png', '브로슈어2.png', '브로슈어3.png'를 넣으시면 이미지로 즉시 표시됩니다.</p>
-            </div>
-
-            <!-- Brochure Gallery Grid with fallback image handling -->
-            <div class="brochure-grid reveal">
-                <div class="brochure-card">
-                    <div class="brochure-img-wrapper">
-                        <img src="브로슈어1.png" alt="ISO 9001 품질경영시스템 인증서" onerror="this.src='cert_iso.png'">
-                    </div>
-                    <div class="brochure-info">
-                        <h3>ISO 9001 품질경영시스템 인증서</h3>
-                        <p>품질경영 및 생산 표준 프로세스에 대한 국제 규격 적합성 검증을 통과하여 신뢰성 높은 제조 품질을 보장합니다.</p>
-                    </div>
+            <!-- Video Player Block -->
+            <div class="video-container reveal active" style="margin-bottom: 50px;">
+                <div class="video-info">
+                    <h2>(주)비에이텍 기업 홍보 영상</h2>
+                    <p>
+                        최첨단 워터 솔루션을 선도하는 비에이텍의 무맥동 정량펌프 제조 현장, 정밀 기계 제어 가공 라인 및 차세대 친환경 공학 설비 공정을 시각적으로 보실 수 있습니다.
+                    </p>
                 </div>
-
-                <div class="brochure-card">
-                    <div class="brochure-img-wrapper">
-                        <img src="브로슈어2.png" alt="국가통합인증 KC 마크" onerror="this.src='cert_kc.png'">
-                    </div>
-                    <div class="brochure-info">
-                        <h3>국가통합인증 KC 마크</h3>
-                        <p>한국기계전기전자시험연구원에서 시행하는 엄격한 안전성 및 내구도 시험 기준을 충족해 인증을 획득했습니다.</p>
-                    </div>
-                </div>
-
-                <div class="brochure-card">
-                    <div class="brochure-img-wrapper">
-                        <img src="브로슈어3.png" alt="경영혁신형 중소기업 메인비즈 확인서" onerror="this.src='cert_mainbiz.png'">
-                    </div>
-                    <div class="brochure-info">
-                        <h3>경영혁신형 중소기업 메인비즈 확인서</h3>
-                        <p>마케팅, 조직관리, 경영 전반에 걸친 혁신 활동 성과를 정식 평가받아 중소벤처기업부로부터 혁신성장 강소기업으로 공인받았습니다.</p>
-                    </div>
+                
+                <div class="video-wrapper">
+                    <video src="기업 홍보 영상.mp4" controls playsinline preload="metadata" poster="hero.png"></video>
                 </div>
             </div>
 
-            <!-- Brochure Download Action -->
-            <div class="brochure-download-container reveal">
-                <div class="download-box">
-                    <i class="fas fa-file-pdf download-icon"></i>
-                    <div class="download-text">
-                        <h3>비에이텍 종합 브로슈어 (PDF)</h3>
-                        <p>로컬 폴더에 <strong>브로슈어.pdf</strong> 파일을 넣으시면 다운로드 버튼과 연동됩니다. (대체 다운로드: 정량펌프 유지관리지침서.pdf)</p>
+            <!-- Page Section Separator -->
+            <div class="section-separator"></div>
+
+            <!-- Company History Block -->
+            <div id="history" class="history-container reveal active" style="margin-bottom: 50px;">
+                <div class="history-info">
+                    <h2>(주)비에이텍 회사 연혁</h2>
+                    <p>
+                        독보적인 기술 경쟁력과 지속적인 연구개발로 워터 펌프 분야의 신뢰받는 동반자가 되겠습니다.
+                    </p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2010. 11. 01</div>
+                        <div class="timeline-content">
+                            <h3>㈜강원유체 설립</h3>
+                            <p>정밀 기계 공학 및 액체 이송 펌프 제어 엔지니어링의 첫걸음을 딛었습니다.</p>
+                        </div>
                     </div>
-                    <!-- 다운로드 기능 수행 링크. 브로슈어.pdf를 다운로드할 수 있도록 설계하되, 없을 경우 기존 지침서로 다운로드 실행 -->
-                    <a href="브로슈어.pdf" download="비에이텍_브로슈어.pdf" class="btn btn-primary download-btn" onerror="this.href='정량펌프 유지관리지침서.pdf'">
-                        <i class="fas fa-download"></i> 다운로드 받기
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2012. 12. 10</div>
+                        <div class="timeline-content">
+                            <h3>벤처기업인증 획득</h3>
+                            <p>중소기업청으로부터 혁신적인 유체 역학 기술 역량을 우수하게 평가받아 벤처기업 인증서를 공식 획득했습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2013. 02. 19</div>
+                        <div class="timeline-content">
+                            <h3>상호 및 대표자 변경</h3>
+                            <p>새로운 도약과 사세 확장을 위해 상호를 기존 <strong>㈜강원유체</strong>에서 현재의 <strong>비에이텍㈜</strong>으로 전격 변경하고 대표 경영진 체계를 개편했습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2017. 12. 29</div>
+                        <div class="timeline-content">
+                            <h3>강원도지사 표창 수상</h3>
+                            <p>지역 산업 진흥 및 기술 혁신 공로를 기려 강원도지사 표창장을 수상하는 영예를 안았습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Section Separator -->
+            <div class="section-separator"></div>
+
+            <!-- Brochure Card Block -->
+            <div class="brochure-container reveal active">
+                <div class="brochure-info">
+                    <h2>비에이텍 종합 기술 카탈로그</h2>
+                    <p>
+                        본 브로슈어는 (주)비에이텍의 독보적인 무맥동 정량펌프 기술, BLDC M/C UNIT 제어 솔루션 및 다양한 산업 현장에 최적화된 기계 설계 공정을 상세히 기술하고 있습니다.
+                    </p>
+                </div>
+
+                <!-- Brochure Image Panel with Premium Hover Shadow -->
+                <div class="brochure-wrapper">
+                    <img src="브로슈어.png" alt="(주)비에이텍 공식 브로슈어">
+                </div>
+
+                <!-- Download Button Directly Beneath -->
+                <div class="download-action-area" style="max-width: 450px;">
+                    <a href="브로슈어.png" download="비에이텍_공식_브로슈어.png" class="btn-download">
+                        <i class="fas fa-file-download"></i>
+                        브로슈어 고해상도 이미지 다운로드
                     </a>
+                    <div class="file-spec">
+                        <span><i class="far fa-image"></i> PNG 이미지</span>
+                        <span><i class="far fa-hdd"></i> 2.4 MB</span>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -123,10 +148,11 @@
                     <h3 class="logo">(주)비에이텍<span>.</span></h3>
                     <p style="margin-bottom: 25px; color: #94a3b8;">워터펌프 제작, 설치, 수리 분야의<br>신뢰받는 파트너가 되겠습니다.</p>
                     <div class="footer-info">
-                        <p><i class="fas fa-map-marker-alt"></i> 춘천시 퇴계로 1번지</p>
-                        <p><i class="fas fa-phone"></i> 033-248-1111</p>
-                        <p><i class="fas fa-fax"></i> 033-248-1234</p>
-                        <p><i class="fas fa-envelope"></i> aaa@naver.com</p>
+                        <p><i class="fas fa-user"></i> 대표이사: 조세연</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 강원특별자치도 춘천시 퇴계공단2길 64</p>
+                        <p><i class="fas fa-phone"></i> 033-264-9243</p>
+                        <p><i class="fas fa-fax"></i> 033-251-5747</p>
+                        <p><i class="fas fa-envelope"></i> cilly03@naver.com</p>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -135,7 +161,7 @@
                         <li><a href="intro.html">기업소개</a></li>
                         <li><a href="product.html">주요제품</a></li>
                         <li><a href="equipment.html">장비현황</a></li>
-                        <li><a href="sales_history.html">주요업력</a></li>
+                        <li><a href="records.html">주요사업실적</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -143,8 +169,8 @@
                     <ul>
                         <li><a href="map.html">찾아오시는 길</a></li>
                         <li><a href="inquiry.html">온라인 문의</a></li>
-                        <li><a href="#">유지보수 지침서</a></li>
-                        <li><a href="#">A/S 접수</a></li>
+                        <li><a href="equipment.html">유지보수 지침서</a></li>
+                        <li><a href="inquiry.html">A/S 접수</a></li>
                     </ul>
                 </div>
             </div>
@@ -154,13 +180,9 @@
         </div>
     </footer>
 
-    <!-- Lightbox Modal for Brochure Preview -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" alt="브로슈어 크게 보기">
-        <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
