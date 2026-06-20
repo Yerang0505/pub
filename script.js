@@ -354,6 +354,86 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initialize UI
         updateSliderUI();
     }
+
+    // --- Company Video Click Play/Pause Logic (intro.html) ---
+    const promoVideo = document.querySelector('.promo-video');
+    if (promoVideo) {
+        const firstSource = promoVideo.querySelector('source');
+        if (firstSource) {
+            firstSource.addEventListener('error', function() {
+                console.log("Local video '홍보영상.mp4' not found. Switching to online demo video.");
+                promoVideo.src = "https://assets.mixkit.co/videos/preview/mixkit-water-filtration-system-in-operation-40078-large.mp4";
+                promoVideo.load();
+            });
+        }
+
+        promoVideo.addEventListener('click', function() {
+            if (this.paused) {
+                this.play().catch(err => {
+                    console.log("Video play pending or interrupted:", err);
+                });
+            } else {
+                this.pause();
+            }
+        });
+    }
+
+    // --- Lightbox Modal Logic (intro.html) ---
+    const brochureGrid = document.querySelector('.brochure-grid');
+    const lightbox = document.getElementById('lightbox-modal');
+    if (brochureGrid && lightbox) {
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+        
+        // Find all brochure cards and add click listeners
+        const cards = brochureGrid.querySelectorAll('.brochure-card');
+        cards.forEach(card => {
+            const img = card.querySelector('img');
+            const title = card.querySelector('h3').textContent;
+            const desc = card.querySelector('p').textContent;
+            
+            // Indicator that it's clickable
+            card.style.cursor = 'pointer';
+            
+            card.addEventListener('click', () => {
+                lightbox.style.display = 'block';
+                // Trigger reflow for animation
+                setTimeout(() => {
+                    lightbox.classList.add('active');
+                }, 10);
+                
+                lightboxImg.src = img.src;
+                lightboxCaption.innerHTML = `<strong>${title}</strong><br>${desc}`;
+                document.body.style.overflow = 'hidden'; // Lock background scroll
+            });
+        });
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+            }, 300);
+            document.body.style.overflow = 'auto'; // Unlock background scroll
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeLightbox);
+        }
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === closeBtn) {
+                closeLightbox();
+            }
+        });
+        
+        // Close with escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'block') {
+                closeLightbox();
+            }
+        });
+    }
 });
 
 
