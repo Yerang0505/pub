@@ -281,5 +281,79 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('beforeunload', saveFinalPosition);
         window.addEventListener('pagehide', saveFinalPosition);
     }
+
+    // --- Card News Slider Logic (Only runs on pages with #pdf-viewport) ---
+    const pdfViewport = document.getElementById('pdf-viewport');
+    if (pdfViewport) {
+        const pdfTrack = document.getElementById('pdf-track');
+        const prevBtn = document.getElementById('pdf-prev');
+        const nextBtn = document.getElementById('pdf-next');
+        const pageNumSpan = document.getElementById('pdf-page-num');
+        const pageCountSpan = document.getElementById('pdf-page-count');
+
+        let currentSlide = 0;
+        const slides = pdfTrack.querySelectorAll('.pdf-slide');
+        const numPages = slides.length;
+        
+        if (pageCountSpan) {
+            pageCountSpan.textContent = numPages;
+        }
+
+        // Set viewport aspect ratio based on the first image when loaded
+        if (slides.length > 0) {
+            const firstImg = slides[0].querySelector('img');
+            if (firstImg) {
+                if (firstImg.complete) {
+                    setViewportAspect(firstImg);
+                } else {
+                    firstImg.addEventListener('load', () => setViewportAspect(firstImg));
+                }
+            }
+        }
+
+        function setViewportAspect(img) {
+            const aspectRatio = img.naturalWidth / img.naturalHeight;
+            if (pdfViewport && aspectRatio) {
+                pdfViewport.style.aspectRatio = aspectRatio;
+            }
+        }
+
+        function updateSliderUI() {
+            if (pdfTrack) {
+                pdfTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            if (pageNumSpan) {
+                pageNumSpan.textContent = currentSlide + 1;
+            }
+            if (prevBtn) {
+                prevBtn.disabled = (currentSlide <= 0);
+            }
+            if (nextBtn) {
+                nextBtn.disabled = (currentSlide >= numPages - 1);
+            }
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSliderUI();
+                }
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < numPages - 1) {
+                    currentSlide++;
+                    updateSliderUI();
+                }
+            });
+        }
+
+        // Initialize UI
+        updateSliderUI();
+    }
 });
+
 
